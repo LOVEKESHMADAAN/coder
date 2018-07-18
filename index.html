@@ -1,0 +1,143 @@
+<html>
+    <head>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+}
+
+body
+  {
+    background: lightgreen;
+    margin-top: 100px;
+  }
+
+#div1
+{
+   width:350px;
+    margin:auto;
+}
+#answer
+{
+    width:320px;
+    height:45px;
+    font-size: 38px;
+    background: #e2e2e2;
+    border: 2px solid #333;
+    padding: 8px;
+    text-align: right;
+    
+}
+ .button{
+    width:80px;
+    height:80px;
+    float:left;
+    color:yellow;
+    font-size: 28px;
+    border: 1px solid #353;
+    background:#272822;
+ }
+  .button1{
+    
+    
+    width:160px;
+    height:80px;
+    float:left;
+    color:aliceblue;
+    font-size: 28px;
+    border: 1px solid #353;
+    background:#272822;
+}
+.button:hover{
+    background: pink;
+    cursor:pointer;
+    font-size: 32px;
+    
+    
+}
+.button:active{
+    background: green;
+    font-size: 36px;
+    
+}
+.button1:hover{
+    background: pink;
+    cursor:pointer;
+    font-size: 32px;
+    
+    
+}
+.button1:active{
+    background: green;
+    font-size: 36px;
+    
+}
+        </style>
+   
+        
+    </head>
+
+    <body>
+    <div id="div1">
+    <form name="calculator">
+        <input type="text" id ="answer" name ="display" >
+        <input type="button" value="7" class="button" onclick="document.calculator.display.value +='7'">
+        <input type="button" value="8" class="button" onclick="document.calculator.display.value +='8'">
+        <input type="button" value="9" class="button" onclick="document.calculator.display.value +='9'">
+        <input type="button" value="+" class="button" onclick="btplus()">
+        <input type="button" value="4" class="button" onclick="document.calculator.display.value +='4'">
+        <input type="button" value="5" class="button" onclick="document.calculator.display.value +='5'">
+        <input type="button" value="6" class="button" onclick="document.calculator.display.value +='6'">
+        <input type="button" value="-" class="button" onclick="btmin()">
+        <input type="button" value="1" class="button" onclick="document.calculator.display.value +='1'">
+        <input type="button" value="2" class="button" onclick="document.calculator.display.value +='2'">
+        <input type="button" value="3" class="button" onclick="document.calculator.display.value +='3'">
+        <input type="button" value="*" class="button" onclick="btmult()">
+        <input type="button" value="0" class="button" onclick="document.calculator.display.value +='0'">
+        <input type="button" value="%" class="button" onclick="btmod()">
+        <input type="button" value="." class="button" onclick="btdot()">
+        <input type="button" value="/" class="button" onclick="btdiv()">
+            <input type="button" value="=" class="button1"onclick="document.calculator.display.value =eval(document.calculator.display.value)">
+            <input type="button" value="C" class="button1" onclick="btclear()">
+        </form> 
+    </div>
+          <script >
+        function btplus()
+{ document.calculator.display.value +="+";
+  document.calculator.display.style.textAlign="right";
+    
+}
+function btmin()
+{ document.calculator.display.value +="-";
+  document.calculator.display.style.textAlign="right";
+    
+}
+function btmult()
+{ document.calculator.display.value +="*";
+  document.calculator.display.style.textAlign="right";
+    
+}
+function btmod()
+{ document.calculator.display.value +="%";
+  document.calculator.display.style.textAlign="right";
+    
+}
+function btdot()
+{ document.calculator.display.value +=".";
+  document.calculator.display.style.textAlign="right";
+    
+}
+function btdiv()
+{ document.calculator.display.value +="/";
+  document.calculator.display.style.textAlign="right";
+    
+}
+function btclear()
+{ document.calculator.display.value ="";
+  document.calculator.display.style.textAlign="right";
+    
+}
+        
+        </script>
+    </body>
+</html>
